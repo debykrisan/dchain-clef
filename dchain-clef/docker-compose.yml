@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  clef:
+    hostname: clef
+    image: clef
+    build:
+      context: .
+    ports:
+      - 8550:8550
+    networks:
+      priv-eth-net:
+
+networks:
+  priv-eth-net:
+    driver: bridge
+    name: priv-eth-net
